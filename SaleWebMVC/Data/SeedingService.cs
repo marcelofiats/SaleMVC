@@ -34,6 +34,11 @@ namespace SaleWebMVC.Data
             Saller s4 = new Saller(4, "Martha Red", "martha@gmail.com", 3000.0, new DateTime(1993, 11, 30), d4);
             Saller s5 = new Saller(5, "Donald Blue", "donald@gmail.com", 4000.0, new DateTime(2000, 1, 9), d3);
             Saller s6 = new Saller(6, "Alex Pink", "bob@gmail.com", 3000.0, new DateTime(1997, 3, 4), d2);
+            Saller s7 = new Saller(7, "Marcelo Fiats", "marcelo.fiats@gmail.com", 3000.0, new DateTime(1987, 2, 19), d1);
+            Saller s8 = new Saller(6, "Fernando Baioco", "fernando@gmail.com", 2000.0, new DateTime(2000, 8, 12), d2);
+            Saller s9 = new Saller(6, "Daniel Vendan", "daniel@gmail.com", 5000.0, new DateTime(1995, 3,18), d1);
+            Saller s10 = new Saller(6, "Verônica Fiats", "veronica@gmail.com", 4000.0, new DateTime(1991, 12, 13), d3);
+            Saller s11 = new Saller(6, "Madalena", "madalena@gmail.com", 2500.0, new DateTime(1960, 7, 20), d4);
 
             SalesRecord r1 = new SalesRecord(1, new DateTime(2018, 09, 25), 11000.0, SaleStatus.Billed, s1);
             SalesRecord r2 = new SalesRecord(2, new DateTime(2018, 09, 4), 7000.0, SaleStatus.Billed, s5);
@@ -65,15 +70,28 @@ namespace SaleWebMVC.Data
             SalesRecord r28 = new SalesRecord(28, new DateTime(2018, 10, 7), 4000.0, SaleStatus.Billed, s3);
             SalesRecord r29 = new SalesRecord(29, new DateTime(2018, 10, 23), 12000.0, SaleStatus.Billed, s5);
             SalesRecord r30 = new SalesRecord(30, new DateTime(2018, 10, 12), 5000.0, SaleStatus.Billed, s2);
+            SalesRecord r31 = new SalesRecord(31, new DateTime(2018, 11, 12), 22000.0, SaleStatus.Billed, s7);
+            SalesRecord r32 = new SalesRecord(32, new DateTime(2018, 11, 13), 9000.0, SaleStatus.Billed, s7);
+            SalesRecord r33 = new SalesRecord(33, new DateTime(2018, 11, 24), 4000.0, SaleStatus.Billed, s8);
+            SalesRecord r34 = new SalesRecord(34, new DateTime(2018, 11, 19), 11000.0, SaleStatus.Canceled, s9);
+            SalesRecord r35 = new SalesRecord(35, new DateTime(2018, 11, 12), 8000.0, SaleStatus.Billed, s11);
+            SalesRecord r36 = new SalesRecord(36, new DateTime(2018, 11, 31), 7000.0, SaleStatus.Billed, s11);
+            SalesRecord r37 = new SalesRecord(37, new DateTime(2018, 11, 6), 5000.0, SaleStatus.Billed, s11);
+            SalesRecord r38 = new SalesRecord(38, new DateTime(2018, 11, 13), 9000.0, SaleStatus.Pending, s10);
+            SalesRecord r39 = new SalesRecord(39, new DateTime(2018, 11, 7), 4000.0, SaleStatus.Billed, s10);
+            SalesRecord r40 = new SalesRecord(40, new DateTime(2018, 11, 23), 12000.0, SaleStatus.Billed, s10);
+            SalesRecord r41 = new SalesRecord(41, new DateTime(2018, 11, 12), 5000.0, SaleStatus.Billed, s9);
+
 
             _context.Department.AddRange(d1, d2, d3, d4);
 
-            _context.Saller.AddRange(s1, s2, s3, s4, s5, s6);
+            _context.Saller.AddRange(s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11);
 
             _context.SalesRecords.AddRange(
                 r1, r2, r3, r4, r5, r6, r7, r8, r9, r10,
                 r11, r12, r13, r14, r15, r16, r17, r18, r19, r20,
-                r21, r22, r23, r24, r25, r26, r27, r28, r29, r30
+                r21, r22, r23, r24, r25, r26, r27, r28, r29, r30,
+                r31, r32, r33, r34, r35, r36, r37, r38, r39, r40, r41
             );
 
             _context.SaveChanges();
